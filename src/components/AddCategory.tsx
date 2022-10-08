@@ -10,7 +10,6 @@ const AddCategory = ({ onNewCategory }: any) => {
     event.preventDefault()
     const newCategory: string = inputValue.trim()
     if( newCategory.length <= 1 ) return
-    // setCategories ( (categories: string[]) => [ inputValue, ...categories])
     onNewCategory(newCategory)
     setInputValue('')
   }
