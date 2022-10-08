@@ -5,6 +5,8 @@ export const GifExpertApp = () => {
   const [categories, setCategories] = useState<string[]>(['TypeScript', 'JavaScript'])
 
   const onAddCategory: any = ( newCategory: string ) => {
+    //validación de nombres únicos:
+    if ( categories.includes( newCategory )) return
     setCategories([newCategory, ...categories])
   }
 
